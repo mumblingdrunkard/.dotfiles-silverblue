@@ -10,6 +10,10 @@ RUN dnf -y install kitty-terminfo
 RUN dnf -y copr enable varlad/helix
 RUN dnf -y install helix
 
+# Install lazygit
+RUN dnf -y copr enable atim/lazygit -y
+RUN dnf -y install lazygit
+
 # Install direnv
 RUN dnf -y install direnv
 
