@@ -2,7 +2,7 @@
 
 rpm-ostree install distrobox zsh gnome-tweaks syncthing
 
-rpm-ostree override remove firefox-langpacks firefox
+rpm-ostree override remove firefox-langpacks firefox toolbox
 
 flatpak install com.github.geigi.cozy                \
                 com.mattjakeman.ExtensionManager     \
