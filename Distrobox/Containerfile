@@ -11,8 +11,11 @@ RUN dnf -y copr enable varlad/helix
 RUN dnf -y install helix
 
 # Install lazygit
-RUN dnf -y copr enable atim/lazygit -y
+RUN dnf -y copr enable atim/lazygit
 RUN dnf -y install lazygit
+
+# Install tmux
+RUN dnf -y install tmux
 
 # Install direnv
 RUN dnf -y install direnv

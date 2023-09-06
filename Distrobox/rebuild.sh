@@ -17,8 +17,9 @@ cp     .zshrc        .local/share/distrobox/home/dev
 cp     .p10k.zsh     .local/share/distrobox/home/dev
 rm -rf .local/share/distrobox/home/dev/powerlevel10k 
 cp -r  powerlevel10k .local/share/distrobox/home/dev
+cp     .tmux.conf    .local/share/distrobox/home/dev
 
 # Append direnv hook to .zshrc as direnv is not in host system, but should be in dev container
 echo ''                           >> .local/share/distrobox/home/dev/.zshrc
 echo '# Set up direnv'            >> .local/share/distrobox/home/dev/.zshrc
-echo 'eval "\$(direnv hook zsh)"' >> .local/share/distrobox/home/dev/.zshrc
+echo 'eval "$(direnv hook zsh)"' >> .local/share/distrobox/home/dev/.zshrc
