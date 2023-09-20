@@ -28,5 +28,5 @@ RUN sh <(curl -L https://nixos.org/nix/install) --daemon --yes
 ENV PATH $PATH:/nix/var/nix/profiles/default/bin
 RUN nix-env -iA cachix -f https://cachix.org/api/v1/install
 RUN USER=root cachix use devenv
-RUN nix-env -if https://install.devenv.sh/latest
+RUN nix-env -if https://install.devenv.sh/python-rewrite
 
