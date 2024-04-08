@@ -10,5 +10,7 @@ setopt autocd extendedglob
 # End of lines configured by zsh-newuser-install
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+alias dev="distrobox enter dev"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,32 +1,10 @@
-FROM fedora-toolbox:38
+FROM fedora-toolbox:39
 
 # Ensure updated base
 RUN dnf -y upgrade
-
-# Kitty
 RUN dnf -y install kitty-terminfo
-
-# Install Helix editor
-RUN dnf -y copr enable varlad/helix
-RUN dnf -y install helix
-
-# Install lazygit
-RUN dnf -y copr enable atim/lazygit
-RUN dnf -y install lazygit
-
-# Install tmux
-RUN dnf -y install tmux
-
-# Install direnv
-RUN dnf -y install direnv
-
-# DNF clean up
 RUN dnf clean all
 
 # Install nix and auxiliary programs
 RUN sh <(curl -L https://nixos.org/nix/install) --daemon --yes
 ENV PATH $PATH:/nix/var/nix/profiles/default/bin
-RUN nix-env -iA cachix -f https://cachix.org/api/v1/install
-RUN USER=root cachix use devenv
-RUN nix-env -if https://install.devenv.sh/python-rewrite
-

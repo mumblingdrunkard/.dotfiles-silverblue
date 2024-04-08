@@ -1,7 +1,7 @@
-cd $HOME
+# Delete old images/containers
+distrobox rm --force dev
+podman rmi --force dev
 
-. Distrobox/build-container.sh
-
-. Distrobox/update-config.sh
-
-. Distrobox/misc.sh
+# Rebuild
+podman build . --tag dev
+distrobox assemble create
